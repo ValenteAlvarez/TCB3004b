@@ -1,0 +1,31 @@
+$note-yellow: rgb(255, 251, 35);
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+	text-decoration: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.AppWrapper {
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}

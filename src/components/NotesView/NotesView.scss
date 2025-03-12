@@ -1,0 +1,89 @@
+$note-yellow: rgb(225, 202, 67);
+$cancel-red: rgb(244, 70, 70);
+$secondary-grey: rgb(65, 64, 64);
+
+
+.NotesView {
+	display: flex;
+	flex-grow: 1;
+	gap: 10px;
+	box-sizing: border-box;
+	position: relative;
+	padding: 10px;
+	overflow-y: scroll;
+
+	.NewNoteForm {
+		display: flex;
+		flex-flow: column;
+		flex: 1 0 30%;
+		border-right: 1px solid $secondary-grey;
+		padding-right: 10px;
+	}
+
+	.NoteCollection,
+	&>p {
+		flex: 1 1 70%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		align-content: start;
+		position: relative;
+		overflow-y: scroll;
+		gap: 5px;
+
+		.Note {
+			flex: 1 0 180px;
+			padding: 10px;
+			height: 190px;
+			border: 1px solid $secondary-grey;
+			border-radius: 10px;
+			position: relative;
+
+			.NoteTitle {
+				text-decoration: underline;
+				font-weight: bold;
+			}
+
+			.NoteText {
+				margin-top: 5px;
+				color: $secondary-grey;
+			}
+
+			&:hover {
+				button {
+					display: flex;
+
+				}
+			}
+
+
+			button {
+				display: none;
+				border-radius: 100%;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				padding: 10px;
+				box-sizing: border-box;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				transition: box-shadow 0.2s linear;
+				justify-content: center;
+				align-items: center;
+				background-color: white;
+
+				&:hover {
+					box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+				}
+
+				&:active {
+					background-color: $cancel-red;
+					transition: none;
+					box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+					color: white;
+				}
+			}
+		}
+	}
+}

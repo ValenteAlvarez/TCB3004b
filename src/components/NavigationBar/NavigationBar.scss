@@ -1,0 +1,40 @@
+$background-blue: rgb(88, 105, 216);
+$background-blue-dark: rgb(68, 82, 168);
+
+.NavigationBar {
+	background-color: $background-blue;
+	color: white;
+	display: flex;
+	padding: 0 20px;
+	align-items: center;
+	justify-content: space-between;
+
+	.NavigationGroup {
+		display: flex;
+		gap: 10px;
+	}
+
+
+	.NavigationItem {
+		color: white;
+		padding: 10px;
+		transition: background-color 0.2s ease-out;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		&:hover {
+			background-color: $background-blue-dark;
+			cursor: pointer;
+		}
+
+		.NavigationItemIcon {
+			max-width: 30px;
+			max-height: 20px;
+			object-fit: contain;
+			filter: invert(1);
+		}
+	}
+}
